@@ -1,2 +1,4 @@
 com/javalinkedlist/LinkedListTest.java
  com.javalinkedlist.LinkedListTest
+com/javalinkedlist/MyLinkedListTest.java
+ com.javalinkedlist.MyLinkedListTest

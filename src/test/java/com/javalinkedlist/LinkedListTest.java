@@ -9,6 +9,7 @@ public class LinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(70);
         MyNode<Integer> myThirdNode = new MyNode<>(30);
+        MyLinkedList mylinkedList = new MyLinkedList();
         myFirstNode.setNext(mySecondNode);
         mySecondNode.setNext(myThirdNode);
         boolean result = myFirstNode.getNext().equals(mySecondNode) &&
