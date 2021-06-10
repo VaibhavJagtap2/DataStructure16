@@ -20,7 +20,7 @@ public class MyLinkedList<K> {
             this.head.setNext(tempNode);
         }
     }
-    public void addElement(INode newNode) {
+    public void append(INode newNode) {
         if(this.tail == null) {
             this.tail = newNode;
         }
@@ -28,9 +28,10 @@ public class MyLinkedList<K> {
             this.head = newNode;
         }
         else {
-            INode<K> tempNode = this.head;
-            this.head = newNode;
-            this.head.setNext(tempNode);
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+  //          INode<K> tempNode = this.head;//       this.head = newNode;
+   //         this.head.setNext(tempNode);
         }
     }
     public void insert(INode destNode, INode newNode) {
@@ -40,6 +41,11 @@ public class MyLinkedList<K> {
         }
         newNode.setNext(tempNode.getNext());
         tempNode.setNext(newNode);
+    }
+    public void pop() {
+       // INode<K> tempNode = this.head;
+        this.head = this.head.getNext();
+       // return tempNode;
     }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
@@ -53,4 +59,5 @@ public class MyLinkedList<K> {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
+
 }
