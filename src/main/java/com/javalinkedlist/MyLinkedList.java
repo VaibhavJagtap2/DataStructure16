@@ -20,6 +20,27 @@ public class MyLinkedList<K> {
             this.head.setNext(tempNode);
         }
     }
+    public void addElement(INode newNode) {
+        if(this.tail == null) {
+            this.tail = newNode;
+        }
+        if(this.head == null) {
+            this.head = newNode;
+        }
+        else {
+            INode<K> tempNode = this.head;
+            this.head = newNode;
+            this.head.setNext(tempNode);
+        }
+    }
+    public void insert(INode destNode, INode newNode) {
+        INode tempNode = this.head;
+        while (!tempNode.getKey().equals(destNode.getKey())) {
+            tempNode = tempNode.getNext();
+        }
+        newNode.setNext(tempNode.getNext());
+        tempNode.setNext(newNode);
+    }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
