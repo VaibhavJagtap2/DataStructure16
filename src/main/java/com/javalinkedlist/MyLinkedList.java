@@ -20,7 +20,7 @@ public class MyLinkedList<K>  {
                 this.head.setNext(tempNode);
             }
         }
-        public void append(INode newNode) {
+        public void addElement(INode newNode) {
             if(this.tail == null) {
                 this.tail = newNode;
             }
@@ -52,15 +52,26 @@ public class MyLinkedList<K>  {
                 return null;
             if (this.head.getNext().equals(null))
                 return null;
-            else{
+            else {
                 INode tempNode = head;
-                while (!tempNode.getNext().equals(tail)){
+                while (!tempNode.getNext().equals(tail)) {
                 }
                 INode tempLastNode = tempNode.getNext();
                 tempLastNode.setNext(null);
                 return tempLastNode;
             }
         }
+            public INode search(INode element) {
+                StringBuffer myNodes = new StringBuffer("My Nodes: ");
+                INode tempNode = head;
+                while (tempNode.getNext() != null) {
+                tempNode = tempNode.getNext();
+                if (tempNode.equals(tail))
+                    return tempNode;
+            }
+            return null;
+        }
+
         public void printMyNodes() {
             StringBuffer myNodes = new StringBuffer("My Nodes: ");
             INode tempNode = head;
@@ -73,4 +84,4 @@ public class MyLinkedList<K>  {
             myNodes.append(tempNode.getKey());
             System.out.println(myNodes);
         }
-    }
+}
