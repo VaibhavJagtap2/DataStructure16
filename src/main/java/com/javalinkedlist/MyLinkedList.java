@@ -20,27 +20,27 @@ public class MyLinkedList<K>  {
                 this.head.setNext(tempNode);
             }
         }
-        public void addElement(INode newNode) {
-            if(this.tail == null) {
-                this.tail = newNode;
-            }
+        public void append(INode newNode) {
             if(this.head == null) {
                 this.head = newNode;
             }
-            else {
-                this.tail.setNext(newNode);
+            if(this.tail == null) {
                 this.tail = newNode;
-                //          INode<K> tempNode = this.head;//       this.head = newNode;
-                //         this.head.setNext(tempNode);
+            }
+            else {
+
+                INode tempNode = this.head;
+                while (tempNode.getNext() != null) {
+                    tempNode = tempNode.getNext();
+                }
+                tempNode.setNext(newNode);
+                this.tail = newNode;
             }
         }
-        public void insert(INode destNode, INode newNode) {
-            INode tempNode = this.head;
-            while (!tempNode.getKey().equals(destNode.getKey())) {
-                tempNode = tempNode.getNext();
-            }
-            newNode.setNext(tempNode.getNext());
-            tempNode.setNext(newNode);
+    public void insert(INode myNode, INode newNode) {
+        INode tempNode=myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
         }
         public void pop() {
             // INode<K> tempNode = this.head;
@@ -61,16 +61,17 @@ public class MyLinkedList<K>  {
                 return tempLastNode;
             }
         }
-            public INode search(INode element) {
-                StringBuffer myNodes = new StringBuffer("My Nodes: ");
-                INode tempNode = head;
-                while (tempNode.getNext() != null) {
-                tempNode = tempNode.getNext();
-                if (tempNode.equals(tail))
-                    return tempNode;
+    public boolean search(INode key) {
+        INode tempNode = head;
+        while(tempNode !=null && tempNode.getNext()!=null) {
+
+            if (tempNode.getKey()==key.getKey()) {
+                return true;
             }
-            return null;
+            tempNode = tempNode.getNext();
         }
+        return false;
+    }
 
         public void printMyNodes() {
             StringBuffer myNodes = new StringBuffer("My Nodes: ");
@@ -84,4 +85,5 @@ public class MyLinkedList<K>  {
             myNodes.append(tempNode.getKey());
             System.out.println(myNodes);
         }
+
 }

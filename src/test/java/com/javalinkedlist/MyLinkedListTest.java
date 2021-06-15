@@ -24,7 +24,7 @@ public class MyLinkedListTest {
     @Test
     public void given3NumbersShouldPassedHeadFromEnd() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
-        MyNode<Integer> mySecondNode = new MyNode<>(300);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(myFirstNode);
@@ -42,7 +42,7 @@ public class MyLinkedListTest {
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         myLinkedList.add(myFirstNode);
-        myLinkedList.addElement(mySecondNode);
+        myLinkedList.append(mySecondNode);
         myLinkedList.insert(myFirstNode, mySecondNode);
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(myFirstNode) &&
@@ -57,8 +57,8 @@ public class MyLinkedListTest {
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         myLinkedList.add(myFirstNode);
-        myLinkedList.addElement(mySecondNode);
-        myLinkedList.addElement(myThirdNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
         myLinkedList.pop();
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(mySecondNode) &&
@@ -71,9 +71,9 @@ public class MyLinkedListTest {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
-        myLinkedList.addElement(myFirstNode);
-        myLinkedList.addElement(mySecondNode);
-        myLinkedList.addElement(myThirdNode);
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
         myLinkedList.popLast();
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(myFirstNode) &&
@@ -84,14 +84,29 @@ public class MyLinkedListTest {
     @Test
     public void given3NumbersShouldSearchElementInLinkedList() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
-        MyNode<Integer> mySecondNode = new MyNode<>(70);
-        MyNode<Integer> myThirdNode = new MyNode<>(30);
-        myLinkedList.addElement(myFirstNode);
-        myLinkedList.addElement(mySecondNode);
-        myLinkedList.addElement(myThirdNode);
-        INode element=myLinkedList.search(mySecondNode);
-        myLinkedList.printMyNodes();
-        boolean result =element.getKey().equals(mySecondNode.getKey());
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        boolean search = myLinkedList.search(mySecondNode);
+        Assert.assertEquals(myFirstNode,search);
+    }
+    @Test
+    public void given4NumbersWhenInsertInMiddleShouldPassTheLinkedList() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(40);
+        MyNode<Integer> myFourthNode = new MyNode<>(70);
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myFourthNode);
+        myLinkedList.insert(mySecondNode,myThirdNode);
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                         myLinkedList.head.getNext().equals(mySecondNode) &&
+                         myLinkedList.head.getNext().getNext().equals(myThirdNode) &&
+                         myLinkedList.tail.equals(myFourthNode);
         Assert.assertTrue(result);
+        myLinkedList.printMyNodes();
     }
 }
