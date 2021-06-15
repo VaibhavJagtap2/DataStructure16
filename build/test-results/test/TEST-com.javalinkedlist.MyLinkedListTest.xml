@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.javalinkedlist.MyLinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-15T14:14:44" hostname="DESKTOP-4QDC4A3" time="0.006">
+<testsuite name="com.javalinkedlist.MyLinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-15T14:54:17" hostname="DESKTOP-4QDC4A3" time="0.071">
   <properties/>
-  <testcase name="given4NumbersWhenInsertInMiddleShouldPassTheLinkedList" classname="com.javalinkedlist.MyLinkedListTest" time="0.006"/>
-  <system-out><![CDATA[My Nodes: 56->30->40->70
+  <testcase name="given4NumbersWhenMiddleElementIsDeleted_ShouldPassLinkedList" classname="com.javalinkedlist.MyLinkedListTest" time="0.071"/>
+  <system-out><![CDATA[size of linkedlist: 3
+My Nodes: 56->30->70
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
