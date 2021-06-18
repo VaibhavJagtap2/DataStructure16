@@ -3,6 +3,11 @@ package com.javalinkedlist;
 public class MyLinkedList<K>  {
         public INode<K> head;
         public INode<K> tail;
+        public static int count;
+
+        public static int getCount(){
+            return count;
+        }
         public MyLinkedList() {
             this.head = head;
             this.tail = tail;
@@ -70,6 +75,21 @@ public class MyLinkedList<K>  {
             }
         }
         return null;
+    }
+    public void sorted(INode newNode){
+            count++;
+            INode currentNode = this.head;
+            INode prevNode = null;
+            while (currentNode != null && (int) newNode.getKey() > (int) currentNode.getKey()) {
+                prevNode = currentNode;
+                currentNode = currentNode.getNext();
+            }
+            if (prevNode == null) {
+                this.head = newNode;
+            }else {
+                prevNode.setNext(newNode);
+            }
+            newNode.setNext(currentNode);
     }
 
         public void printMyNodes() {
