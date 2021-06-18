@@ -6,3 +6,5 @@ com/javalinkedlist/MyLinkedList.java
  com.javalinkedlist.MyLinkedList
 com/javalinkedlist/MyStack.java
  com.javalinkedlist.MyStack
+com/javalinkedlist/MyQueue.java
+ com.javalinkedlist.MyQueue

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.javalinkedlist.StackTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-18T07:59:04" hostname="DESKTOP-4QDC4A3" time="0.007">
-  <properties/>
-  <testcase name="given3NumbersDeleteStackPeakReturnTrue" classname="com.javalinkedlist.StackTest" time="0.007"/>
-  <system-out><![CDATA[My Nodes: 30->70
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
