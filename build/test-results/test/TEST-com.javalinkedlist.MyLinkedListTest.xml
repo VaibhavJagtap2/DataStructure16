@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.javalinkedlist.MyLinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-18T07:15:50" hostname="DESKTOP-4QDC4A3" time="0.01">
-  <properties/>
-  <testcase name="given4NumbersAddedInLinkedList_ShouldInAscendingOrder" classname="com.javalinkedlist.MyLinkedListTest" time="0.01"/>
-  <system-out><![CDATA[My Nodes: 30->40->56->70
-4
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
