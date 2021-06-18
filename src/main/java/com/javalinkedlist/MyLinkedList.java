@@ -47,10 +47,10 @@ public class MyLinkedList<K>  {
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
         }
-        public void pop() {
-            // INode<K> tempNode = this.head;
+        public INode pop() {
+             INode<K> tempNode = this.head;
             this.head = this.head.getNext();
-            // return tempNode;
+             return tempNode;
         }
         public INode popLast() throws NullPointerException {
             if (this.head == null)
