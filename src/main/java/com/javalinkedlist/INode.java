@@ -5,4 +5,5 @@ public interface INode<K> {
     void setKey(K key);
     INode getNext();
     void setNext(INode next);
+    int compareTo(Object o);
 }

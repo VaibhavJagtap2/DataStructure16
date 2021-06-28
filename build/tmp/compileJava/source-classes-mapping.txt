@@ -1,10 +1,14 @@
-com/javalinkedlist/INode.java
- com.javalinkedlist.INode
 com/javalinkedlist/MyNode.java
  com.javalinkedlist.MyNode
+com/javalinkedlist/INode.java
+ com.javalinkedlist.INode
+com/javalinkedlist/MyMapNode.java
+ com.javalinkedlist.MyMapNode
+com/javalinkedlist/MyQueue.java
+ com.javalinkedlist.MyQueue
 com/javalinkedlist/MyLinkedList.java
  com.javalinkedlist.MyLinkedList
 com/javalinkedlist/MyStack.java
  com.javalinkedlist.MyStack
-com/javalinkedlist/MyQueue.java
- com.javalinkedlist.MyQueue
+com/javalinkedlist/MyHashMap.java
+ com.javalinkedlist.MyHashMap
