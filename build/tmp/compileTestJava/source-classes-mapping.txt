@@ -8,3 +8,5 @@ com/javalinkedlist/LinkedListTest.java
  com.javalinkedlist.LinkedListTest
 com/javalinkedlist/HashMapTest.java
  com.javalinkedlist.HashMapTest
+com/javalinkedlist/BinaryTest.java
+ com.javalinkedlist.BinaryTest

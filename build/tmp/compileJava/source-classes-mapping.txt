@@ -12,3 +12,7 @@ com/javalinkedlist/MyStack.java
  com.javalinkedlist.MyStack
 com/javalinkedlist/MyHashMap.java
  com.javalinkedlist.MyHashMap
+com/javalinkedlist/BinaryNode.java
+ com.javalinkedlist.BinaryNode
+com/javalinkedlist/BinaryTree.java
+ com.javalinkedlist.BinaryTree
